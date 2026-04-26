@@ -65,10 +65,8 @@ class _HomePageState extends State<HomePage> {
           // Simple replacement for {{key}}
           // Note: This works best if you type the placeholder in one go in Word.
           final replacements = {
-            '{{name}}': nameController.text,
-            '{{sender_name}}': addressController.text,
-            '{{organization_name}}': cityController.text,
-            '{{contact_information}}': phoneController.text,
+            '{{card}}': nameController.text,
+            '{{date}}': addressController.text,
           };
 
           replacements.forEach((key, value) {
@@ -139,10 +137,10 @@ class _HomePageState extends State<HomePage> {
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            buildTextField('Name', nameController),
-            buildTextField('Sender', addressController),
-            buildTextField('Organization', cityController),
-            buildTextField('Contact', phoneController),
+            buildTextField('Card', nameController),
+            buildTextField('Date', addressController),
+            // buildTextField('Organization', cityController),
+            // buildTextField('Contact', phoneController),
 
             const SizedBox(height: 20),
 
